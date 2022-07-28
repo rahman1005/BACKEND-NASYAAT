@@ -1,15 +1,15 @@
-const express =require("express");
-const dotenv = require('dotenv');
-const cors = require('cors');
-const cookieParser =require ("cookie-parser");
-const db =require ("./config/Database.js");
-const Users =require ("./models/userModel.js");
-const category =require ("./models/category.js");
-const Lembaga = require( "./models/lembaga.js");
-const Events =require ("./models/events.js");
-const Admin = require("./models/admin.js");
-const AboutUs =require ("./models/aboutUs.js");
-const router =require ("./routes/index.js");
+import express from "express";
+import dotenv from 'dotenv';
+import cors from 'cors';
+import cookieParser from "cookie-parser";
+import db from "./config/Database.js";
+import Users from "./models/userModel.js";
+import category from "./models/category.js";
+import Lembaga from "./models/lembaga.js";
+import Events from "./models/events.js";
+import Admin from "./models/admin.js";
+import AboutUs from "./models/aboutUs.js";
+import router from "./routes/index.js";
 dotenv.config();
 const app = express();
 
@@ -32,4 +32,4 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(router);
 app.use('/assets', express.static('assets'));
-app.listen()
+app.listen(5000, ()=> console.log('server running at port 5000'))
