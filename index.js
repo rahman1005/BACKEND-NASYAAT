@@ -32,4 +32,4 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(router);
 app.use('/assets', express.static('assets'));
-app.listen(5000, ()=> console.log('server running at port 5000'))
+app.listen()
