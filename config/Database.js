@@ -8,7 +8,7 @@ import { Sequelize } from "sequelize";
 //         charset: 'utf8mb4_unicode_ci'
 //       }
 // });
-const db = new Sequelize('nasyaat', 'root','',{
+const db = new Sequelize('nasyaat', 'root','gendauai',{
     host:"localhost",
     dialect: "mysql",
     port:3306
